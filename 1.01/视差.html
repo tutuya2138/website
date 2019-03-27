@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>视差</title>
+    <link  type="text/css" rel="stylesheet" href="视差style.css">
+    <script src="jquery-3.3.1.js"></script>
+    <script src="视差main.js"></script>
+</head>
+
+
+<body>
+
+
+<style>
+    .canvasRain {
+        display: block;
+        background-color: rgba(0, 0, 0, 0);
+        position: fixed;
+        z-index: -1;
+    }
+    .canvas1{
+        display: block;
+        position: fixed;
+        background-color: #000000;
+        z-index: -3;
+    }
+    .canvas2{
+        display: block;
+        margin: -50vh;
+        z-index: 1;
+        pointer-events: none;
+    }
+</style>
+
+
+<canvas class="canvasRain" ></canvas>
+<div class="login" id="login">
+    <canvas class="canvas1" ></canvas>
+    <div class="bg" id=" loginBg" onclick="rtn0();"></div>
+    <div class="logo"><a >Welcome to my site.</a></div>
+    <div class="login_menu">
+        <div class="blank"></div>
+        <div class="ipt">
+            <input  id ="txt" type="text" value="" placeholder="用户名/邮箱/手机号" onclick="javascript:count();"/><br/>
+            <div class="text-list" id = "user-list">
+                <ul>
+                    <li id="admin" onclick="admIn();"><a>admin</a></li><p>
+                    <li id="guest" onclick="gstIn();"><a>guest</a></li>
+                </ul>
+            </div>
+            <input id ="psd" type="password" placeholder="请输入密码"/><br/>
+            <button  id ="submit" type="submit" onclick= "javascript:login();">SIGN IN</button>
+            <div class="photo" id="photo" onclick="changeBg();" title="点我更换颜色"></div>
+        </div>
+    </div>
+</div>
+<div class="container" id = "container">
+    <nav class="navbar">
+        <ul>
+            <li><a class="111" href="#home">Page 1</a> </li>
+            <li><a class="111" href="#about" onclick="javascript: square();">Page 2</a> </li>
+            <li><a class="111" href="#service">Page 3</a> </li>
+            <li><a class="111" href="#contact">Page 4</a> </li>
+            <div id = "login-photo"></div>
+        </ul>
+    </nav>
+    <section id = "home">
+        <h1></h1>
+        <p> </p>
+    </section>
+    <section id = "about">
+        <canvas class="canvas2"></canvas>
+        <div ><h1>黑 夜</h1>
+            <p>如果不曾 见过 希望，就 不会 感到 绝望。 </p></div>
+    </section>
+    <section id = "service">
+        <div id ="containerOfFour">
+            <div class="containerOfFour1">
+                <div class="cell" id="cell1">
+                    <a>音频</a>
+                    <div class="cell-bar" id="cell-bar1"></div>
+                </div>
+                <div class="cell" id="cell2">
+                    <a>视频</a>
+                    <div class="cell-bar" id="cell-bar2"></div>
+                </div>
+                <div class="cell" id="cell3">
+                    <a>图像</a>
+                    <div class="cell-bar" id="cell-bar3"></div>
+                </div>
+                <div class="cell" id="cell4">
+                    <a>文字</a>
+                    <div class="cell-bar" id="cell-bar4"></div>
+                </div>
+            </div>
+            <div class="containerOfZero"></div>
+            <div class="containerOfMain">
+                <div class = "main-board" id="main-board1">
+                    <div id="main-board1-container">
+                        <div id="upBoard">
+                            <ul>
+                                <li class="first"><img src="jpg/t01.jpg"></li>
+                                <li class="second"><img src="jpg/t02.jpg"></li>
+                                <li class="third"><img src="jpg/t03.jpg"></li>
+                                <li class="forth"><img src="jpg/t04.jpg"></li>
+                                <li class="cen"><img src="jpg/t05.jpg"></li>
+                                <li class="forth sixth"><img src="jpg/t06.jpg"></li>
+                                <li class="third seventh"><img src="jpg/t07.jpg"></li>
+                                <li class="second last"><img src="jpg/t08.jpg"></li>
+                            </ul>
+                            <div class="btn">
+                                <div class="leftBtn"></div>
+                                <div class="rightBtn"></div>`
+                            </div>
+                        </div>
+                        <div id="btmBoard"></div>
+                    </div>
+                </div>
+                <div class = "main-board" id="main-board2">
+                    <video src="video/火箭少女101%20-%20卡路里.mp4"
+                           width="92%" controls></video>
+                    <div class="videoMain">
+                        <div class="danmu">
+                            <input type="text" placeholder="发个友善的弹幕记录一下吧~" id="danmu-input"/>
+                            <button id="send">发表</button>
+                        </div>
+                        <div class="videoList">
+                            <div class="aVideo" id="video1">
+                                <img class="cover" id="cover1"src="video/卡路里.jpeg" width="331.2px" height="207px"/>
+                            </div>
+                            <div class="aVideo" id="video2">
+                                <img class="cover" id="cover2"src="jpg/5.jpg" width="331.2px" height="207px"/>
+                            </div>
+                            <div class="aVideo" id="video3">
+                                <img class="cover" id="cover3" src="jpg/6.jpg" width="331.2px" height="207px"/>
+                            </div>
+                            <div class="aVideo" id="video4">
+                                <img class="cover" id="cover4" src="jpg/7.jpg" width="331.2px" height="207px"/>
+                            </div>
+                            <div class="aVideo" id="video5">
+                                <img class="cover" id="cover5" src="jpg/8.jpg" width="331.2px" height="207px"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class = "main-board" id="main-board3"><a>3333</a></div>
+                <div class = "main-board" id="main-board4"><a>4444</a></div>
+
+            </div>
+            <!--<div><h1>黎 明</h1>-->
+                <!--<p>将明 之时，像 沙漠 深处 无情的 风暴。 </p>-->
+            <!--</div>-->
+        </div>
+
+    </section>
+    <section id = "contact">
+        <div><h1>蛰 伏</h1>
+            <p>散落 在 泥泞 里，等待。。。 。。。 </p></div>
+    </section>
+</div>
+
+</body>
+<script type="text/javascript" src="视差main.js"></script>
+</html>

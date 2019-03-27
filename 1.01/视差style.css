@@ -1,0 +1,497 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 微软雅黑;
+    background: rgb(0, 0, 0);
+    color: white;
+    line-height: 1.6;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+
+}
+
+#login{
+    width: 100%;
+    height: 100%;
+    z-index:2;
+    position: fixed;
+}
+.bg{
+    width: 100%;
+    height: 100%;
+    z-index:-1;
+    position: fixed;
+    background: url('jpg/5.jpg') no-repeat center center/cover;
+    opacity: 0.2;
+}
+.logo{
+    width: 500px;
+    height: 100px;
+    margin: 100px auto;
+    /*border: 1px red solid;*/
+    text-align: center;
+    font-size: 50px;
+    font-family: "Adobe Garamond Pro";
+    font-weight: bolder;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.47);
+}
+
+.login_menu{
+    width: 250px;
+    height: 450px;
+    margin: -100px auto;
+}
+.blank{
+    width: 100px;
+    height: 200px;
+    z-index: -1;
+}
+input{
+    margin: 15px 45px;
+    height: 30px;
+    outline: none;
+    border: none;
+    background-color: rgba(255, 249, 255, 0);
+    border-bottom: 1px solid rgba(211, 211, 212, 0.34);
+    font-weight: lighter;
+    color: white;
+}
+#user-list{
+    background-color: rgba(255, 249, 255, 0.51);
+    color: black;
+    border-radius: 5px;
+    float: left;
+    position: relative;
+    z-index: 2;
+    margin: -16px 44px;
+    opacity: 0;
+    cursor: pointer;
+}
+.text-list li {
+    list-style: none;
+    width: 158px;
+    border-radius: 5px;
+    text-align: center;
+}
+.text-list li:hover{
+background-color: rgb(255, 249, 249);
+    transition-duration: 500ms;
+}
+button{
+    border-radius: 20px;
+    margin: 10px 43px;
+    height: 35px;
+    width: 158px;
+    outline: none;
+    background-color: rgb(251, 255, 253);
+    border: 1px #666666 solid;
+    cursor: pointer;
+    font-family: 楷体;
+    color: #000000;
+    text-align: center;
+    font-size: 16px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.47);
+
+}
+#photo{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px #666666 dot-dash;
+    background-color: rgba(255, 221, 225, 0.38);
+    margin: 10px 80px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.47);
+}
+button:hover{
+    background-color: rgba(255, 255, 255, 0.31);
+    color: #fdfdfe;
+    transition-duration: 500ms;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    overflow-y:scroll ;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background: rgba(0,0,0,0.0);
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: center;
+}
+.navbar ul li {
+    margin: 0 1rem;
+    padding: 1rem;
+
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff9ff;
+}
+
+#login-photo{
+    width: 45px;
+    height: 45px;
+    background-color: rgba(255, 221, 225, 0.38);
+    border-radius: 50%;
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+.navbar ul li a:hover{
+    color: #5bfff7;
+    transition-duration: 500ms;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    scroll-snap-align:center ;
+    background-attachment: fixed;
+    background-position: center center;
+    overflow: hidden;
+}
+section h1 {
+    font-size: 4rem;
+}
+section p{
+    font-size: 1.5rem;
+}
+
+section#home{
+    background: url('jpg/5.jpg') no-repeat center center/cover;
+    opacity: 0.2;
+    top:0;
+}
+
+section#about{
+    background: linear-gradient(to bottom, rgba(8, 26, 41, 0.68) 0%,
+    black 40%,black 80%, rgba(47, 47, 47, 0.53) 100% );
+}
+
+section#service{
+    background: linear-gradient(to bottom, rgba(47, 47, 47, 0.53) 0%,
+    #887437 40%, #ac8955 80%, rgba(94, 136, 98, 0.53) 100% );
+}
+
+#containerOfFour{
+    background-color: rgba(116, 112, 114, 0.14);
+    width: 1000px;
+    height: 600px;
+    perspective: 1000px;
+}
+
+.containerOfFour1{
+    width: 370px;
+    height: 600px;
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.containerOfZero{
+    width: 30px;
+    height: 600px;
+    float: left;
+}
+.containerOfMain{
+    width: 600px;
+    height: 600px;
+    position: relative;
+    display: block;
+    float: left;
+    transform:  translateZ(-300px) rotateX(0deg);
+    transform-style: preserve-3d;
+    transition-duration: 500ms;
+}
+.cell{
+    width: 100%;
+    height: 25%;
+    line-height: 150px;
+    color: rgba(255, 249, 255, 0.2);
+}
+#cell1{
+    background-color: rgba(0, 187, 161, 0.2);
+}
+#cell1:hover{
+    background-color: rgba(0, 187, 161,1);
+    transition-duration: 300ms;
+    color: rgba(255, 249, 255, 1);
+}
+#cell2{
+    background-color: rgba(250, 87, 112,0.2);
+}
+#cell2:hover{
+    background-color: rgba(250, 87, 112,1);
+    transition-duration: 300ms;
+    color: rgba(255, 249, 255, 1);
+}
+#cell3{
+    background-color: rgba(16, 140, 174, 0.2);
+}
+#cell3:hover{
+    background-color: rgba(16, 140, 174, 1);
+    transition-duration: 300ms;
+    color: rgba(255, 249, 255, 1);
+}
+#cell4{
+    background-color: rgba(187, 58, 165, 0.2);
+}
+#cell4:hover{
+    background-color: rgba(187, 58, 165, 1);
+    transition-duration: 300ms;
+    color: rgba(255, 249, 255, 1);
+}
+
+.cell-bar{
+    width: 75px;
+    height: 150px;
+    float: right;
+}
+
+#cell-bar1:hover{
+    width: 150px;
+    background-color: rgba(94, 94, 94, 0.48);
+    transition-duration: 500ms;
+}
+#cell-bar2:hover{
+    width: 150px;
+    background-color: rgba(94, 94, 94, 0.48);
+    transition-duration: 500ms;
+}
+#cell-bar3:hover{
+    width: 150px;
+    background-color: rgba(94, 94, 94, 0.48);
+    transition-duration: 500ms;
+}
+#cell-bar4:hover{
+    width: 150px;
+    background-color: rgba(94, 94, 94, 0.48);
+    transition-duration: 500ms;
+}
+
+
+.main-board{
+    line-height:600px;
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    font-size: 40px;
+}
+#main-board1{
+    background-color: rgba(0, 187, 161, 1);
+    transform: translatey(-300px) rotateX(90deg);
+}
+
+#main-board1-container{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+#upBoard{
+    width: 100%;
+    height: 50%;
+    background-color: rgb(94, 94, 94);
+    position: relative;
+}
+#upBoard ul li {
+    list-style: none;
+    position: absolute;
+}
+#upBoard ul li img{
+    width: 100%;
+    height: 100%;
+}
+.first{
+    width: 235px;
+    height: 340px;
+    left: 190px;
+    top: 0;
+    z-index: 10;
+}
+.second{
+    width: 177px;
+    height: 266px;
+    left: 60px;
+    top: -33px;
+    z-index: 9;
+}
+.third{
+    width: 122px;
+    height: 184px;
+    top: -75px;
+    left: 13px;
+    z-index: 8;
+}
+.forth{
+    width: 64px;
+    height: 95px;
+    top: -118px;
+    left: 20px;
+    z-index: 7;
+}
+.cen{
+    width: 25px;
+    height: 40px;
+    top: -150px;
+    left: 280px;
+    z-index: 6;
+}
+.sixth{
+    left:510px ;
+    z-index: 7;
+}
+.seventh{
+    left: 465px;
+    z-index: 8;
+}
+.last{
+    left: 365px;
+    z-index: 9;
+}
+.btn div{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 140px;
+    cursor: pointer;
+}
+.btn .leftBtn{
+    left: 0;
+    background:url("jpg/小于.png");
+    background-size: 100% 100%;
+    z-index: 11;
+}
+.btn .rightBtn{
+    right: -5px;
+    background:url("jpg/大于.png");
+    background-size: 100% 100%;
+    z-index: 11;
+}
+#btmBoard{
+    width: 100%;
+    height: 50%;
+    top: 50%;
+}
+
+/*视频区*/
+#main-board2{
+    background-color: #fa5770;
+    transform: translatez(300px) rotateX(0deg);
+}
+.videoMain{
+    height: 46%;
+    width: 100%;
+    background-color: #f85670;
+    margin-top: -46%;
+    position: absolute;
+}
+.danmu{
+    position: absolute;
+    margin: 0 4%;
+    width: 92%;
+    height: 15%;
+    background-color: white;
+    box-shadow: 0 0 3px #666666;
+    border-radius: 1px;
+}
+#danmu-input{
+    position: relative;
+    float: left;
+    top: -10px;
+    border: rgba(102, 102, 102, 0.38) 1px solid;
+    background-color: #ececee;
+    border-radius: 2px;
+    width: 60%;
+}
+#danmu-input:hover{
+    color: #000000;
+    width: 70%;
+    transition-duration: 1000ms;
+}
+#send{
+    position: relative;
+    width: 65px;
+    right: -40px;
+    top: -68px;
+    float: right;
+    color: #f85670;
+    border: none;
+    box-shadow:0 0 3px #666666;
+}
+#send:hover{
+    background-color: #fa5770;
+    color: #fff9ff;
+}
+#send:active{
+    box-shadow:0 0 0 ;
+    transition-duration: 0ms;
+}
+
+.videoList{
+    position: relative;
+    width: 92%;
+    left: 4%;
+    height: 75%;
+    top: 20%;
+    /*overflow: hidden;*/
+}
+.aVideo{
+    float: left;
+    width: 10%;
+    height: 100%;
+    overflow: hidden;
+    /*border: rgb(255, 249, 255) 1px solid;*/
+}
+.cover{
+    position: relative;
+    top:-53%;
+}
+#video1{
+
+}
+#video2{
+}
+#video3{
+}
+#video4{
+}
+#video5 {
+}
+#main-board3{
+    background-color: #108cae;
+    transform: translatey(300px) rotateX(-90deg);
+}
+#main-board4{
+    background-color: #bb3aa5;
+    transform: translateZ(-300px) rotateX(-180deg);
+}
+
+section#contact{
+    background: linear-gradient(to bottom, rgba(94, 136, 98, 0.53) 0%,
+    #5e8862 40%, rgba(94, 136, 98, 0.8) 80%, rgba(4, 39, 13, 0.53) 100% );
+}
